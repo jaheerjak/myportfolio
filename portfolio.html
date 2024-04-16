@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAHEER HUSSEIN S</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        nav a:hover {
+            background-color: #666;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+        }
+        .video-container {
+            margin-bottom: 20px;
+            display: flex;
+            overflow-x: auto; /* Allow horizontal scrolling */
+        }
+        .video-item {
+            flex: 0 0 auto; /* Prevent videos from shrinking */
+            margin-right: 20px; /* Add space between videos */
+        }
+        iframe {
+            width: 400px;
+            height: 225px;
+            border: none;
+        }
+        .project-container {
+            display: flex;
+            overflow-x: auto; /* Allow horizontal scrolling */
+        }
+        .project-item {
+            flex: 0 0 auto; /* Prevent projects from shrinking */
+            margin-right: 20px; /* Add space between projects */
+			cursor: pointer;
+			position: relative;
+        }
+        .project-buttons {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /*display: none;*/
+        }
+		.project-buttons button {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>JAHEER HUSSEIN S</h1>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#demo">Demo Videos</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Work Experience</a>
+    <a href="#resume">Resume</a>
+	<a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+    <h2>About</h2>
+    <p>Eight years of experience in the gaming industry.<br>
+Game Developer | 4+ years in Unity3D, C#. Specializing in immersive game experiences with expertise in photon multiplayer, API integration, UI System, and cross-platform development for Android and iOS. 
+<br>
+Former QA professional with 3.5 years of meticulous testing. Passionate about pushing boundaries in game development.</p>
+</section>
+
+
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="project-container">        
+        
+		<div class="project-item">
+            <img src="img/mcl.jpg" alt="Meta Cricket League">
+            <div class="project-buttons">
+                <button class="android-link" onclick="window.open('https://play.google.com/store/apps/details?id=com.metacricketleague.app&hl=en_US', '_blank')">Android</button>
+                <button class="ios-link" onclick="window.open('https://apps.apple.com/us/app/meta-cricket-league-nft-game/id1616152944', '_blank')">iOS</button>
+            </div>
+        </div>
+		<div class="project-item">
+            <img src="img/cg.jpg" alt="Cricket Gangsta">
+            <div class="project-buttons">
+                <button class="android-link" onclick="window.open('https://apps.apple.com/us/app/cricket-gangsta-1v1-league/id6443536314', '_blank')">Android</button>
+                <button class="ios-link">iOS</button>
+            </div>
+        </div>
+		
+    </div>
+</section>
+<section id="demo">
+    <h2>Demo Videos</h2>
+    <div class="video-container">
+        <!-- Replace the src attribute with the URL of your demo videos -->
+        
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/-ZOEdqxSR6A?si=GcYziM_gvP1iHaTQ" frameborder="0" allowfullscreen></iframe>
+        </div>
+		<div class="video-item">
+            <iframe src="https://www.youtube.com/embed/ENEkVXeLs6s?si=24JYLdNR-PMgoNtj" frameborder="0" allowfullscreen></iframe>
+        </div>
+		<div class="video-item">
+            <iframe src="https://www.youtube.com/embed/SdHG1YKTZHE?si=v6sgg8J1q21AxYJ9" frameborder="0" allowfullscreen></iframe>
+        </div>
+		
+    </div>
+</section>
+<section id="experience">
+    <h2>Work Experience</h2>
+    <div class="experience-item">
+        <h3>Unity Game Developer</h3>
+        <p>Creative Monkey Games - Jul'22 to Apr'24</p>        
+    </div>
+	<div class="experience-item">
+        <h3>Senior Developer</h3>
+        <p>HFG Entertainments Pvt Ltd - Nov'19 to Mar'22</p>        
+    </div>
+	<div class="experience-item">
+        <h3>Team Lead-Quality Analyst</h3>
+        <p>HFG Entertainments Pvt Ltd - Aug'15 to Nov'19</p>        
+    </div>
+    <!-- Add more experience items as needed -->
+</section>
+<section id="contact">
+    <h2>Contact</h2>
+    <p>+91 9043110547<br>
+	jaheerjak@gmail.com</p>
+</section>
+<section id="resume">
+    <h2>Resume</h2>
+    <p>Download my resume:</p>
+    <!-- Replace the href attribute with the URL of your resume -->
+    <a href="https://drive.google.com/file/d/1ciOLa4MD8rB2iC7p6Bsm26S3ju2Fa7SL/view?usp=drive_link" target="_blank">Download R
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const projectItems = document.querySelectorAll(".project-item");
+
+        projectItems.forEach(item => {
+            const image = item.querySelector("img");
+            const buttons = item.querySelector(".project-buttons");
+
+            image.addEventListener("click", function() {
+                buttons.style.display = buttons.style.display === "block" ? "none" : "block";
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
